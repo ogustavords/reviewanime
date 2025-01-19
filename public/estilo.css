@@ -1,0 +1,105 @@
+
+        .container {
+            margin-top: 20px;
+            padding: 20px;
+            color: #9e80a9;
+            border-radius: 8px;
+            
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            color: white; 
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #3b3b3b; 
+            color: white; 
+        }
+
+        .form-control:focus {
+            border-color: #9370DB; 
+            outline: none;
+            box-shadow: 0 0 5px rgba(147, 112, 219, 0.5); 
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #9370DB;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .button:hover {
+            background-color: #CD853F;
+
+            
+        }
+        .anime-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px; 
+        }
+        
+
+        .card {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 20px;
+            width: 30%; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .review-card{
+            background-color: white;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .delete-form {
+            margin-top: 10px; 
+        }
+
+        .delete-button {
+            background-color: #FF6347;
+        }
+
+        .delete-button:hover {
+            background-color: #FF4500;
+        }
+
+  
