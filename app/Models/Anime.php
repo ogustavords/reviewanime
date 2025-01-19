@@ -9,7 +9,7 @@ class Anime extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description'];
+    protected $fillable = ['title', 'description', 'img_itens'];
 
     public function reviews()
     {

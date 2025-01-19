@@ -1,105 +1,115 @@
+/* Novo fundo global */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f4; /* Cor pastel suave para o fundo geral */
+    font-family: "Arial", sans-serif; /* Tipografia limpa */
+}
 
-        .container {
-            margin-top: 20px;
-            padding: 20px;
-            color: #9e80a9;
-            border-radius: 8px;
-            
-        }
+/* Removida a cor da .container */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+}
 
-        .form-group {
-            margin-bottom: 15px;
-        }
+.anime-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards "quebrem" para a próxima linha */
+    justify-content: flex-start; /* Cards começam alinhados à esquerda */
+    gap: 20px; /* Espaço entre os cards */
+    margin-top: 20px;
+}
 
-        label {
-            color: white; 
-        }
+.card {
+    background-color: #fff7ee; /* Tom de creme mais claro para contraste */
+    color: #333333; /* Contraste forte para legibilidade */
+    padding: 15px;
+    width: 280px; /* Tamanho fixo das divs */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex-grow: 0; /* Evita que os cards aumentem além do tamanho fixo */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer; /* Indica que é clicável */
+}
 
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #3b3b3b; 
-            color: white; 
-        }
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
-        .form-control:focus {
-            border-color: #9370DB; 
-            outline: none;
-            box-shadow: 0 0 5px rgba(147, 112, 219, 0.5); 
-        }
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #9370DB;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            margin-top: 10px;
-        }
+.card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
 
-        .button:hover {
-            background-color: #CD853F;
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #87bba2; /* Tom pastel verde-azulado */
+    color: #fff; /* Contraste branco */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    width: 45%; /* Ajusta a largura dos botões */
+    text-align: center; /* Centraliza o texto dentro do botão */
+}
 
-            
-        }
-        .anime-cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px; 
-        }
-        
+.button:hover {
+    background-color: #5a9981; /* Verde-azulado escuro para hover */
+}
 
-        .card {
-            background-color: #2d2d2d;
-            color: white;
-            padding: 20px;
-            width: 30%; 
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
-        .review-card{
-            background-color: white;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s;
-        }
+.delete-button {
+    background-color: #ff9999; /* Tom pastel vermelho claro */
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+.delete-button:hover {
+    background-color: #ff6666; /* Vermelho escuro */
+}
 
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+.card-image {
+    margin-bottom: 15px;
+    text-align: center; /* Centraliza a imagem no card */
+}
 
-        .card-description {
-            font-size: 1rem;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
+.card-image img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o card */
+    height: 200px; /* Define uma altura fixa para consistência */
+    object-fit: cover; /* Ajusta o corte da imagem */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
 
-        .delete-form {
-            margin-top: 10px; 
-        }
+/* Estilos para a imagem do anime na página de detalhes */
+.anime-details img {
+    display: block; /* Faz a imagem se comportar como bloco */
+    max-width: 100%; /* Responsivo: a imagem não ultrapassará a largura do seu contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    margin-bottom: 15px; /* Espaço abaixo da imagem */
+}
 
-        .delete-button {
-            background-color: #FF6347;
-        }
-
-        .delete-button:hover {
-            background-color: #FF4500;
-        }
-
-  
+/* Responsividade */
+@media (max-width: 768px) {
+    .anime-cards {
+        justify-content: center; /* Centraliza os cards em telas menores */
+    }
+    .card-buttons {
+        flex-direction: column; /* Organiza os botões em coluna em telas pequenas */
+        gap: 10px; /* Espaço entre os botões */
+    }
+}

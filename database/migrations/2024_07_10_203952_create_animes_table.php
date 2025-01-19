@@ -12,7 +12,9 @@ class CreateAnimesTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->string('img_itens');
             $table->timestamps();
+
         });
     }
     

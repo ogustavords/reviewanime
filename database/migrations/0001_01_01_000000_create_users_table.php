@@ -1,12 +1,12 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration; // Importa a classe Migration
-use Illuminate\Support\Facades\DB; // Importa o DB para a inserção de dados
-use Illuminate\Support\Facades\Hash; // Importa Hash para criptografar a senha
+use Illuminate\Database\Migrations\Migration; // importa a classe Migration
+use Illuminate\Support\Facades\DB; // importa o DB para a inserção de dados
+use Illuminate\Support\Facades\Hash; // importa Hash para criptografar a senha
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration // Extende a classe Migration corretamente
+return new class extends Migration // extende a classe Migration corretamente
 {
     public function up(): void
     {
@@ -38,12 +38,12 @@ return new class extends Migration // Extende a classe Migration corretamente
             $table->integer('last_activity')->index();
         });
 
-        // Inserir um usuário administrador após criar a tabela
+        // inserir um usuário administrador após criar a tabela
         DB::table('users')->insert([
             'name' => 'Admin',
             'email' => 'admin@example.com',
-            'password' => Hash::make('adminpassword'), // Criptografa a senha
-            'is_admin' => true, // Define como administrador
+            'password' => Hash::make('adminpassword'), //criptografa a senha
+            'is_admin' => true, // define como administrador
             'created_at' => now(),
             'updated_at' => now(),
         ]);
