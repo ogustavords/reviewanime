@@ -173,6 +173,23 @@ public function getAnimeReviews($animeId)
 
         return response()->json($user, 200);
     }
+// Função de logout no ApiController
+public function logout(Request $request)
+{
+    // Obtém o token do usuário atual
+    $user = Auth::user();
+
+    if ($user) {
+        // Revoga o token atual
+        $user->tokens->each(function ($token) {
+            $token->delete();
+        });
+
+        return response()->json(['message' => 'Successfully logged out.'], 200);
+    }
+
+    return response()->json(['error' => 'No user logged in.'], 400);
+}
 
     // Atualiza o perfil do usuário autenticado
     public function updateUserProfile(Request $request)

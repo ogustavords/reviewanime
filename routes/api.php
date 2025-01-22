@@ -8,8 +8,10 @@ use App\Http\Controllers\ApiController; // Ajuste para o namespace correto
 Route::post('/login', [ApiController::class, 'login']);
 Route::post('/register', [ApiController::class, 'register']);
 
+
 // Rotas protegidas por autenticação
 Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/logout', [ApiController::class, 'logout']);
     // Rotas para Animes
     Route::get('/animes', [ApiController::class, 'getAnimes']);
     Route::get('/animes/{id}', [ApiController::class, 'getAnimeDetails']);
