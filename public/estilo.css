@@ -19,6 +19,7 @@ body {
     justify-content: flex-start; /* Cards começam alinhados à esquerda */
     gap: 20px; /* Espaço entre os cards */
     margin-top: 20px;
+    padding-left: 5%;
 }
 
 .card {
@@ -55,15 +56,18 @@ body {
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px; /* Mais espaço interno */
     background-color: #87bba2; /* Tom pastel verde-azulado */
     color: #fff; /* Contraste branco */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px; /* Bordas mais arredondadas */
     transition: background-color 0.3s ease;
-    font-size: 1rem;
-    width: 45%; /* Ajusta a largura dos botões */
+    font-size: 1.1rem; /* Tamanho de fonte maior */
+    width: 100%; /* Botão ocupa toda a largura disponível */
+    max-width: 300px; /* Limita a largura máxima do botão */
     text-align: center; /* Centraliza o texto dentro do botão */
+    margin-top: 20px; /* Espaço superior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
 }
 
 .button:hover {
@@ -91,25 +95,80 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
 }
 
-/* Estilos para a imagem do anime na página de detalhes */
-.anime-details img {
-    display: block; /* Faz a imagem se comportar como bloco */
-    max-width: 100%; /* Responsivo: a imagem não ultrapassará a largura do seu contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Borda arredondada */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
-    margin-bottom: 15px; /* Espaço abaixo da imagem */
+/* Estilos para o formulário de review, mantendo tudo isolado e sem afetar os outros estilos */
+
+/* Variáveis para controlar os estilos dos comentários */
+:root {
+    --form-width: 800px; /* Largura do formulário */
+    --form-padding: 20px; /* Padding do formulário */
+    --form-background: #fff; /* Cor de fundo do formulário */
+    --form-border-radius: 10px; /* Borda arredondada */
+    --form-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Responsividade */
+/* Aplicando as variáveis ao formulário de review */
+.review-card {
+    max-width: var(--form-width);
+    margin: 0 auto;
+    padding: var(--form-padding);
+    background-color: var(--form-background);
+    border-radius: var(--form-border-radius);
+    box-shadow: var(--form-box-shadow);
+}
+
+/* Estilos específicos para o formulário de review */
+.review-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-card label {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Ajustando o tamanho das caixas de texto para o formulário de review */
+.review-card textarea {
+    width: 500px; /* Garante que ocupe toda a largura do formulário */
+    height: 150px; /* Aumentando a altura do campo de comentário */
+    padding: 12px; /* Mais espaçamento interno */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem; /* Aumentando o tamanho da fonte */
+    resize: vertical; /* Permite redimensionar para aumentar a altura */
+    margin-bottom: 10px; /* Espaço abaixo da caixa de texto */
+}
+
+.review-card input[type="number"] {
+    width: auto; /* Ajusta ao tamanho do conteúdo */
+    padding: 5px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    border-radius: 5px; /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda leve */
+    font-size: 1rem; /* Ajusta o tamanho da fonte */
+}
+
+.review-card .text-center button {
+    width: 100%;
+    max-width: 350px;
+}
+.comment-content p {
+    word-wrap: break-word; /* Força quebras de linha para palavras muito longas */
+    word-break: break-word; /* Compatibilidade com navegadores antigos */
+    overflow-wrap: break-word; /* Melhor suporte para navegadores modernos */
+}
+
+#charCount {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Responsividade para telas pequenas, sem afetar a estrutura geral */
 @media (max-width: 768px) {
-    .anime-cards {
-        justify-content: center; /* Centraliza os cards em telas menores */
-    }
-    .card-buttons {
-        flex-direction: column; /* Organiza os botões em coluna em telas pequenas */
-        gap: 10px; /* Espaço entre os botões */
+    .review-card {
+        width: 90%;
+        padding: 15px;
     }
 }

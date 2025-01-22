@@ -32,16 +32,8 @@
                 <div class="card-title">{{ $anime->title }}</div>
                 <div class="card-description">{{ $anime->description }}</div>
 
-                <!-- Transformando a div em um link para redirecionar aos detalhes -->
+                <!-- Link para redirecionar aos detalhes -->
                 <a href="{{ route('anime.details', ['id' => $anime->id]) }}" class="stretched-link"></a>
-                
-                @if(Auth::check() && Auth::user()->is_admin)
-                    <form action="{{ route('anime.destroy', ['id' => $anime->id]) }}" method="POST" class="delete-form mt-2">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="button delete-button">Apagar Anime</button>
-                    </form>
-                @endif
             </div>
             @endforeach
         </div>

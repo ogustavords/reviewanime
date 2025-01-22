@@ -30,7 +30,7 @@ class ReviewController extends Controller
 {
     // validação dos dados do formulário
     $request->validate([
-        'comment' => 'required|string|max:255',
+        'comment' => 'required|string|max:500',
         'rating' => 'required|integer|min:1|max:10', // Verifique se você está coletando a classificação
     ]);
 
@@ -67,7 +67,7 @@ class ReviewController extends Controller
 {
     // validação dos dados do formulário
     $request->validate([
-        'comment' => 'required|string|max:255',
+        'comment' => 'required|string|max:500',
         'rating' => 'required|integer|min:1|max:10', // verifique se você está coletando a classificação
     ]);
 

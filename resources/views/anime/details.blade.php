@@ -9,11 +9,24 @@
     </x-slot>
 
     <div class="container my-5">
+        <!-- Botão de apagar (somente para admin) -->
+        @if(Auth::check() && Auth::user()->is_admin)
+            <form action="{{ route('anime.destroy', ['id' => $anime->id]) }}" method="POST" class="position-relative">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger position-absolute" style="top: 0; right: 0;">
+                    Apagar Anime
+                </button>
+            </form>
+        @endif
+
         <!-- Detalhes do Anime -->
         <div class="anime-details text-center mb-5">
             <h3>{{ $anime->title }}</h3>
-            <!-- Exibindo a imagem do anime -->
-            <img src="{{ asset('storage/img_itens/' . $anime->img_itens) }}" alt="Imagem de {{ $anime->title }}" class="img-fluid mb-3" style="height: 400px; object-fit: cover;>
+            <!-- Exibindo a imagem do anime com flexbox -->
+            <div class="anime-image d-flex justify-content-center">
+                <img src="{{ asset('storage/img_itens/' . $anime->img_itens) }}" alt="Imagem de {{ $anime->title }}" class="img-fluid mb-3" style="max-width: 100%; height: 400px; object-fit: cover;">
+            </div>
             <p class="text-muted">Descrição: {{ $anime->description }}</p>
             <a href="{{ route('review.create', ['id' => $anime->id]) }}" class="btn btn-primary mt-3">Escrever uma Review</a>
         </div>
