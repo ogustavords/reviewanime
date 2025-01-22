@@ -73,8 +73,9 @@ class ApiController extends Controller
     // Adicionando o campo `img_url` a cada anime
     $animes->transform(function ($anime) {
         $anime->img_url = $anime->img_itens
-            ? asset("storage/img_itens/{$anime->img_itens}")
-            : asset("storage/img_itens/noimage.png");
+            ? url("storage/img_itens/{$anime->img_itens}")
+            : url("storage/img_itens/noimage.png");
+
         return $anime;
     });
 

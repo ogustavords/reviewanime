@@ -17,8 +17,8 @@ class AnimeSeeder extends Seeder
         $animes = [
             [
                 'title' => 'Gachiakuta',
-                'description' => 'O menino: Rudo, vivia com o seu pai de criação: Legto, em uma comunidade bastante arruinada, cheia de lixo e entulhos. Aliás, “akuta” em japonês remete aos lixos, coisas inúteis e descartáveis. Mesmo nessas condições, ele conseguia manter a rotina devido a sua habilidade física. Entretanto, acusaram ele de um crime não cometido e ele foi condenado a ser jogado como um lixo no Naraku. Em portugues: Abismo.',
-                'img_itens' => 'gachiakuta.jpeg'
+                'description' => 'Em Gachiakuta, Rudo vive em uma comunidade destruída, onde o lixo é uma presença constante. Ele é acusado injustamente de um crime e é enviado ao Naraku, um abismo onde pessoas consideradas "inúteis" são descartadas. Sua habilidade física é a única coisa que ele consegue manter enquanto luta por sua sobrevivência.',
+                'img_itens' => 'gachiakuta.jpg'
             ],
             [
                 'title' => 'Cowboy Bebop',
@@ -41,9 +41,19 @@ class AnimeSeeder extends Seeder
                 'img_itens' => 'chainsawman.jpg'
             ],
             [
-                'title' => 'Sousou no Frieren',
-                'description' => 'Após uma missão de 10 anos ao lado do herói Himmel e seu grupo, a poderosa maga Frieren derrotou o Rei Demônio e trouxe paz ao reino. Como uma elfa, Frieren tem uma vida de mais de mil anos pela frente. Ela promete retornar para seus amigos e, assim, parte em uma jornada solitária.',
-                'img_itens' => 'sousouf.jpeg'
+                'title' => 'Attack on Titan',
+                'description' => 'A história começa em um mundo onde a humanidade vive dentro de três cidades concêntricas, cada uma protegida por enormes paredes contra os ataques de Titãs, seres humanóides gigantescos que devoram humanos sem motivo aparente. Segue as aventuras de Eren Yeager e seus amigos Mikasa Ackerman e Armin Arlert, cujas vidas mudaram depois que um Titã Colossal rompe o muro de sua cidade natal. Jurando vingança e recuperar o mundo dos Titãs, Eren e seus amigos se juntam à Divisão de Reconhecimento, um grupo de elite de soldados do exército que lutam contra os Titãs. ',
+                'img_itens' => 'aot.jpg'
+            ],
+            [
+                'title' => 'Death Note',
+                'description' => 'A história centra-se em Light Yagami, um estudante do ensino médio que descobre um caderno sobrenatural chamado Death Note, no qual pode matar pessoas se os nomes forem escritos nele enquanto o portador visualizar mentalmente o rosto de alguém que quer assassinar. Então, cansado da monotonia e das injustiças diárias que ocorriam por parte de criminosos, Light tenta eliminar todos os que um dia cometeram crimes e criar um mundo onde não exista o mal, Mas seus planos são interrompidos por L, um famoso detetive particular.',
+                'img_itens' => 'deathnote.jpg'
+            ],
+            [
+                'title' => 'Nana',
+                'description' => 'Duas garotas chamadas Nana se encontram em um trem rumo a Tóquio por acaso. Depois de uma série de coincidências, elas acabam vivendo juntas em um apartamento de número 707 ("ナナ, romanizado: nana" significa "sete", em japonês, que é o nome das duas protagonistas). Apesar de terem personalidades e ideais diferentes, as duas acabam se tornando amigas "por obra do destino". ',
+                'img_itens' => 'nana.jpg'
             ],
             
         ];

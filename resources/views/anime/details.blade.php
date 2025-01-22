@@ -33,6 +33,28 @@
 
         <hr>
 
+        <!-- Média de Avaliação -->
+        <div class="rating-average text-center mb-5">
+            @php
+                $averageRating = $anime->reviews->avg('rating');
+                $halfStars = round($averageRating / 2);  // Dividindo a média por 2
+            @endphp
+
+            <h4 class="text-primary">Média de Avaliação:</h4>
+            <div class="star-rating">
+                @for ($i = 1; $i <= 5; $i++)
+                    @if ($i <= $halfStars)
+                        <span class="star filled">★</span>  <!-- Estrela cheia -->
+                    @elseif ($i - 0.5 <= $halfStars)
+                        <span class="star half-filled">★</span> <!-- Estrela meia cheia -->
+                    @else
+                        <span class="star">★</span> <!-- Estrela vazia -->
+                    @endif
+                @endfor
+            </div>
+            <p class="text-muted">{{ number_format($averageRating, 1) }} / 10</p>
+        </div>
+
         <!-- Seção de Comentários -->
         <div class="comments-section">
             <h4>Comentários</h4>
@@ -53,4 +75,32 @@
             @endforelse
         </div>
     </div>
+
+    <style>
+        .star-rating {
+            display: inline-block;
+            color: gold;
+            font-size: 1.5rem;
+        }
+        .star {
+            margin-right: 3px;
+        }
+        .star.filled {
+            color: gold;
+        }
+        .star.half-filled {
+            color: #FFD700;
+            position: relative;
+        }
+        .star.half-filled:after {
+            content: '★';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #d3d3d3;
+        }
+        .star:not(.filled):not(.half-filled) {
+            color: #d3d3d3;
+        }
+    </style>
 </x-app-layout>
